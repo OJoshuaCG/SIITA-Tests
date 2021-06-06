@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors Design */
+  --orange-uat: #fd4f00;
+  --blue-uat: #071689;
+  --gray-left: #6a6a6a;
+  --red-right: #fe0000;
+  --gray-lines: #9c9c9c;
+  --orange-nav-bar: #fcd5ce;
+  --orange-click: #fcaaaa;
+  --red-buttons: #fd7472;
+  --orange-background: #fdeae6;
+
+  /* Font Colors */
+  --fc-white: #ffffff;
+  --fc-gray: #6a6a6a;
+  --fc-gray-hint: #bcbcbc;
+  --fc-black: #212121;
+  --fc-red: #ba181b;
+  --fc-red-light: #e63946;
+
+  /* Families Fonts */
+  --font-seg-ui: Segoe UI;
+  --font-tahoma: Tahoma;
+  --font-micro: Microsoft PhagsPa;
+
+  /* Font Styles */
+  --style-regular: 400;
+  --style-bold: 800;
+
+  /* Fonts Sizes */
+  --size12: 12px;
+  --size15: 15px;
+  --size18: 18px;
+  --size20: 20px;
+  --size24: 24px;
+  --size30: 30px;
+
+  /*Others */
+  --char-spacing: 0px;
+  --line-spacing21: 21px;
+  --line-spacing23: 23px;
+  --line-spacing24: 24px;
+  --line-spacing26: 26px;
+  --line-spacing27: 27px;
+  --line-spacing29: 29px;
+  --line-spacing36: 36px;
+}
+
+.header,
+.main,
+.footer {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+/* --------------- FOOTER ------------------*/
+
+.footer {
+  font-family: var(--font-seg-ui);
+  font-weight: var(--style-regular);
+  font-size: var(--size12);
+  color: var(--fc-gray);
+  letter-spacing: var(--char-spacing);
+
+  display: grid;
+  grid-template-areas: "enlaces enlaces enlaces info";
+}
+
+.enlaces {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-area: enlaces;
+}
+
+.img-fi {
+  width: 300px;
+}
+
+/* --------------- MEDIAS ------------------*/
+@media screen and (max-width: 1080px) {
+  .enlaces {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .footer {
+    grid-template-areas: "enlaces enlaces info";
+  }
+  .img-fi {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .enlaces {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    grid-template-areas: "enlaces " "info";
+    text-align: center;
+  }
+
+  .enlaces {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-fi {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .enlaces {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
